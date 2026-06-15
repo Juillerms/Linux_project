@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: Sports API Dashboards
+    orgId: 1
+    folder: Sports Infra
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/json

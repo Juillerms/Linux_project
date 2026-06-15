@@ -1,0 +1,20 @@
+# Overlay para Podman em sistemas com SELinux (RHEL/Fedora).
+# O sufixo :Z relabela os volumes para acesso seguro pelos contêineres.
+services:
+  db:
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data:Z
+
+  nginx:
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro,Z
+
+  prometheus:
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro,Z
+      - ./data/prometheus:/prometheus:Z
+
+  grafana:
+    volumes:
+      - ./data/grafana:/var/lib/grafana:Z
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro,Z
