@@ -4,6 +4,8 @@ Ambiente containerizado com **Nginx** (proxy + load balancer), **duas instância
 
 A API registra placares esportivos. O foco do projeto é a infraestrutura, não a lógica de negócio.
 
+Link do Vídeo no YouTube - https://www.youtube.com/watch?v=zMLV49uJ7tg
+
 ---
 
 ## Arquitetura
